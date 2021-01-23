@@ -1,0 +1,68 @@
+
+<div class="container-fluid">
+
+
+      <app-navbar></app-navbar>
+
+
+
+  <div class="row">
+    <div class="col-sm-1 col-md-3 col-lg-4"></div>
+    <div class="col-sm-10 col-md-6 col-lg-4 text-center">
+
+      <br> <br> 
+
+
+      <div class="card">
+
+        <div class="card-body elegant-color white-text rounded-bottom">
+
+
+          <h4 class="card-title">{{fullName}}</h4>
+          <h6 class="card-title">@{{user}}</h6>
+          <hr class="hr-light">
+
+          <div class="siguiendoSeguidores">
+
+            <h6>Siguiendo: <span class="badge orange darken-4">{{siguiendo}}</span></h6>
+
+            <h6>Seguidores: <span class="badge orange darken-4">{{seguidores}}</span></h6>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <br>
+
+      <app-txtAreaTuitear (getTuitsMiPerfil)="getTuitsMiPerfil()"></app-txtAreaTuitear>
+
+
+      <br>
+
+
+      <app-posteo
+      *ngFor="let tuit of tuits"
+      [userTuit2]="tuit.user" 
+      [mgTuit]="tuit.mg"
+      [idTUIT]="tuit.id"
+      [rtSiOno]="tuit.rtSiOno"
+      [rtPOR]="tuit.rtPOR"
+      [rtTuit]="tuit.rt"
+      [tuitTuit]="tuit.tuit"
+      [tuitOrRetuit]="esUnTuit"
+      ></app-posteo>
+
+
+      <app-ascensor></app-ascensor>
+
+
+
+    </div>
+    <div class="col-sm-1 col-md-3 col-lg-4"></div>
+  </div>
+
+
+
+</div>

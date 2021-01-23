@@ -1,0 +1,42 @@
+
+
+
+
+<div *ngIf="rtSiOnoBOOL && !hidden">
+  <div data-aos="fade-left" class="card text-white green darken-4 mb-3">
+  <div class="card-header header">RT por @{{rtPOR}}</div>
+  <div class="card-body">
+    <div class="dataUser" (click)="otroPerfil($event, userTuit2)">
+      <h5 class="card-title">{{fullName}}</h5>
+      <h6 class="card-title">@{{userTuit2}}</h6>
+    </div>
+    <h6 class="text-white">{{tuitTuit}}</h6>
+    <div class="text-center divBTNSmgRt">
+      <button (click)="clickMG($event)" id={{idTUIT}}
+      type="button" class="btn red darken-4">{{mgTuit}} <i id="icon" class="fas fa-heart"></i></button>
+      <button (click)="clickRT($event)" name={{idTUIT}}
+      type="button" class="btn green lighten-1">{{rtTuit}} <i class="fas fa-retweet"></i></button>
+    </div>
+  </div>
+</div>
+</div>
+
+<div *ngIf="!rtSiOnoBOOL && !hidden">
+<div data-aos="fade-left" class="card text-white orange darken-4 mb-3">
+  <div class="card-body">
+    <div class="dataUser" (click)="otroPerfil($event, userTuit2)">
+      <h5 class="card-title">{{fullName}}</h5>
+      <h6 class="card-title">@{{userTuit2}}</h6>
+    </div>
+    <h6 class="text-white">{{tuitTuit}}</h6>
+    <div class="text-center divBTNSmgRt">
+      <button (click)="clickMG($event)" id={{idTUIT}}
+      type="button" class="btn red darken-4">{{mgTuit}} <i id="icon" class="fas fa-heart"></i></button>
+      <button (click)="clickRT($event)" name={{idTUIT}}
+      type="button" class="btn green lighten-1">{{rtTuit}} <i class="fas fa-retweet"></i></button>
+    </div>
+  </div>
+</div>
+</div>
+
+<div *ngIf="hidden"></div>
